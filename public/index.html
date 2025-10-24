@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <nav>
+    <h2>DoctorFinder</h2>
+    <ul>
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('doctors')">Doctors</a></li>
+      <li><a href="#" onclick="showSection('about')">About</a></li>
+      <li><a href="#" onclick="showSection('services')">Services</a></li>
+      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+    </ul>
+  </nav>
+
+  
+  <section id="home" class="page-section active">
+    <h1>Welcome to DoctorFinder</h1>
+    <p>Find trusted doctors by specialization, location, or name.</p>
+
+    
+    <button onclick="showSection('doctors')">Find a Doctor Now</button>
+
+    
+    
+<h2>Featured Doctors</h2>
+    <div id="featured-doctors" class="featured-container"></div>
+  </section>
+  
+  <section id="doctors" class="page-section">
+    <h1>Find Your Doctor</h1>
+    <input type="text" id="search" placeholder="Search by name, specialization, or city">
+    <button onclick="searchDoctors()">Search</button>
+    <div id="results"></div>
+  </section>
+
+  
+  <section id="about" class="page-section">
+    <h1>About Us</h1>
+    <p>DoctorFinder helps you connect with top healthcare professionals near you.</p>
+
+    <h2>Our Mission</h2>
+    <p>To make healthcare access simple and transparent for everyone.</p>
+
+    <h3>Available 24*7</h3>
+    <p>Anytime available(24*7)</p>
+  </section>
+
+
+  
+
+<section id="services" class="page-section">
+  <h1>Our Services</h1>
+  <p>Click on any service to know more:</p>
+  <ul class="services-list">
+    <li onclick="showServiceInfo('checkup')">General Checkups</li>
+    <li onclick="showServiceInfo('consultation')"> Specialist Consultation</li>
+    <li onclick="showServiceInfo('surgery')"> Surgery Bookings</li>
+    <li onclick="showServiceInfo('reminders')"> Appointment Reminders</li>
+  </ul>
+</section>
+
+
+<div id="serviceModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeServiceModal()">&times;</span>
+    <h2 id="serviceTitle"></h2>
+    <p id="serviceDescription"></p>
+  </div>
+</div>
+
+
+  
+  <section id="contact" class="page-section">
+    <h1>Contact Us</h1>
+   <p>doctorfinder@gmail.com</p>
+    <p>9822323254</p>
+  </section>
+
+  <script src="script.js"></script>
+  <div id="appointmentModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Book Appointment with <span id="doctorName"></span></h2>
+    <form id="appointmentForm">
+      <input type="text" id="patientName" placeholder="Your Name" required>
+      <input type="date" id="appointmentDate" required>
+      <input type="time" id="appointmentTime" required>
+      <button type="submit">Book Appointment</button>
+    </form>
+    <p id="confirmationMessage" style="color: green;"></p>
+  </div>
+</div>
+</body>
+</html>
