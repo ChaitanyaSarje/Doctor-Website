@@ -194,3 +194,22 @@ form textarea {
   transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
+#about {
+  background-color: #fff0f5; /* light pink tone (change this as you like) */
+  color: #333;
+  padding: 60px 20px;
+}
+
+#about h1, #about h2, #about h3 {
+  color: #d7006c; /* your navbar pink theme color */
+}
+
+#about p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#contact { background-color: PINK; }
+
+
